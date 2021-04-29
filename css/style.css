@@ -1,0 +1,242 @@
+/* Loading fonts api */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.content {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+    transition: 1.5s;
+}
+
+.content.activate {
+    right: 300px;
+}
+
+.content header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-title {
+    cursor: pointer;
+    display: flex;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.main-title .h2-dak {
+    color: #00affe;
+    text-transform: capitalize;
+    font-size: 2.5em;
+}
+
+.main-title .h2-sa {
+    font-size: 2.5em;
+}
+
+.main-title .h2-s {
+    padding: 0 10px;
+    text-transform: capitalize;
+    font-size: 2.5em;
+}
+
+.main-menu {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('../media/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.main-menu.activate {
+    background: url('../media/menu_close.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    filter: contrast(1.2);
+    z-index: -1000;
+
+}
+
+.main-logo {
+    height: 360px;
+    width: 360px;
+    opacity: 0.9;
+    max-width: 50%;
+    max-height: 50%;
+    position: absolute;
+    right: 300px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    /* background-color: cyan; */  /* Changing the background overlay */
+    mix-blend-mode: overlay;    /* Overlay effect */
+}
+
+.text-background {
+    position: relative;
+    z-index: 10;
+}
+
+.text-background .first {
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 0.6em;
+    color: #00affe;
+    text-shadow: black 8px 8px 10px;
+}
+
+.text-background .second {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 0.6m;
+    text-transform: capitalize;
+    text-shadow: black 6px 6px 5px;
+}
+
+.text-background h3 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 0.6em;
+    text-shadow: black 6px 6px 5px;
+}
+
+.text-background p {
+    font-size: 3em;
+    margin: 20px 0;
+    font-weight: 400px;
+    max-width: 700px;
+    color: cyan;
+    text-shadow: black 5px 5px 5px;
+}
+
+.text-background a {
+    display: inline-block;
+    font-size: 1.5em;
+    background: #111;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.text-background a:hover {
+    letter-spacing: 3px;
+    color: cyan;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.social li a:hover {
+    transform: scale(0.7) translateY(-20px);
+}
+
+.social li a img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul {
+    position: relative;
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 28px;
+    color: black;
+    padding: 1px 5px 0 0;
+    font-weight: 700;
+}
+
+.nav ul li a:hover {
+    color: #03a9f4;
+}
+
+@media(max-width: 798px) {
+    .content, 
+    .content header {
+        padding: 40px;
+    }
+
+    .text-background h2 {
+        font-size: 3em;
+    }
+
+    .text-background h3 {
+        font-size: 2em;
+    }
+}
